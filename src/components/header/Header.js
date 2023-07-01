@@ -4,7 +4,7 @@ import "./_header.scss"
 import { FaBars } from "react-icons/fa"
 import { AiOutlineSearch } from "react-icons/ai"
 import { MdNotifications , MdApps} from "react-icons/md"
-import { useHistory,useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 
@@ -19,7 +19,7 @@ const Header = ({handleToggleSidebar}) => {
 
      history(`/search/${input}`)
   }
-  const user = useSelector(state => state.auth?.user)
+  const {photoURL} = useSelector(state => state.auth?.user)
   
   return (
     <div className='border border-dark header'>
@@ -39,7 +39,7 @@ const Header = ({handleToggleSidebar}) => {
       <dic className="header__icons">
         <MdNotifications size={28}/>
         <MdApps size={28}/>
-        <img src="https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png" alt="avatar" />
+        <img src={photoURL} alt="https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png" />
       </dic>
     </div>
   )
