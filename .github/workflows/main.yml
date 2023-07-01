@@ -12,8 +12,8 @@ jobs:
     name: Build & Deployment
     runs-on : ubuntu-latest
     steps:
-      - name : get the source code
-      uses: actions/checkout@v2
+    - name : get the source code
+    uses: actions/checkout@v2
 
     - name : install node
       uses: actions/setup-node@v2
