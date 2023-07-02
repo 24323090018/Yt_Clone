@@ -49,8 +49,8 @@
     }
 
     &.open{
-        //transform: translateX(0);
-        display: block;
+        transform: translateX(0);
+        // display: block;
     }
     
 }
@@ -70,9 +70,9 @@
 
 @media (max-width: $breakpoint-small){
     .sidebar{
-        // transform: translateX(-100%);
-        // position: fixed;
-        // z-index: 999;
-        display: none;
+        transform: translateX(-100%);
+        position: fixed;
+        z-index: 999;
+        // display: none;
     }
 }
