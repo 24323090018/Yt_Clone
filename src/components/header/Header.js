@@ -19,7 +19,7 @@ const Header = ({handleToggleSidebar}) => {
 
      history(`/search/${input}`)
   }
-  const {photoURL} = useSelector(state => state.auth?.user)
+  //const { photoURL } = useSelector(state => state.auth.user)
   
   return (
     <div className='border border-dark header'>
@@ -39,7 +39,7 @@ const Header = ({handleToggleSidebar}) => {
       <dic className="header__icons">
         <MdNotifications size={28}/>
         <MdApps size={28}/>
-        <img src={photoURL} alt="https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png" />
+        <img src="https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png" alt='avatar'/>
       </dic>
     </div>
   )
